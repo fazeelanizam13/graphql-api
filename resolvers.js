@@ -37,11 +37,14 @@ const resolvers = {
 
       if(args.words) 
         args.words.map((word, index) => {
-          wordsWithNewIDs.push({
-            id: index+1,
+          let newWord = {
+            id: words.length + (index + 1),
             word: word.word,
             meaning: word.meaning
-          })
+          }
+
+          wordsWithNewIDs.push(newWord)
+          words.push(newWord)
         })
 
       const group = {
