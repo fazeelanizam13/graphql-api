@@ -18,19 +18,19 @@ const resolvers = {
       return word
     },
     editWord: (parent, args) => {
-      const index = words.findIndex(word => word.id === args.id);
+      const index = words.findIndex(word => word.id === args.id)
       const newWord = {
         id: args.id,
         word: args.word,
         meaning: args.meaning || ''
-      };
-      words[index] = newWord;
-      return newWord;
+      }
+      words[index] = newWord
+      return newWord
     },
     deleteWord: (parent, args) => {
-      const deletedWord = words.find(word => word.id === args.id);
-      words = words.filter(word => word.id !== args.id);
-      return deletedWord;
+      const deletedWord = words.find(word => word.id === args.id)
+      words = words.filter(word => word.id !== args.id)
+      return deletedWord
     },
     addGroup: (parent, args) => {
       let wordsWithNewIDs = []
@@ -53,19 +53,19 @@ const resolvers = {
       return group
     },
     editGroup: (parent, args) => {
-      const index = groups.findIndex(group => group.id === args.id);
+      const index = groups.findIndex(group => group.id === args.id)
       const newGroup = {
         id: args.id,
         name: args.name,
         words: groups[index].words
-      };
-      groups[index] = newGroup;
-      return newGroup;
+      }
+      groups[index] = newGroup
+      return newGroup
     },
     deleteGroup: (parent, args) => {
-      const deletedGroup = groups.find(group => group.id === args.id);
-      groups = groups.filter(group => group.id !== args.id);
-      return deletedGroup;
+      const deletedGroup = groups.find(group => group.id === args.id)
+      groups = groups.filter(group => group.id !== args.id)
+      return deletedGroup
     },
   }
 }
