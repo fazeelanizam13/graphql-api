@@ -22,6 +22,10 @@ lib-cov
 coverage
 *.lcov
 
+# firebase
+.firebase/*
+.firebaserc
+
 # nyc test coverage
 .nyc_output
 
@@ -59,11 +63,22 @@ typings/
 .rts2_cache_es/
 .rts2_cache_umd/
 
+# misc
+.DS_Store
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
 # Optional REPL history
 .node_repl_history
 
 # Output of 'npm pack'
 *.tgz
+
+# production
+/build
 
 # Yarn Integrity file
 .yarn-integrity
