@@ -1,2 +1,5 @@
-# flashcards
-App to memorize words when learning a new language.
+# graphql-api
+
+A mock GraphQL API that performs CRUD operations flat file data. Built with [apollo-server](https://github.com/apollographql/apollo-server/).
+
+
